@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header" >
+
+    </LinearLayout>
+    
+  s<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+    
+    <TextView
+        android:id="@+id/address_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/balance_title"
+        android:layout_marginTop="5dp"
+        android:text="ReddCoin Address:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <TextView
+        android:id="@+id/address_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/balance_title"
+        android:layout_below="@+id/address_title"
+        android:text="--" />
+    
+    
+    <TextView
+        android:id="@+id/balance_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/address_value"
+        android:text="ReddCoin Balance:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/balance_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/balance_title"
+        android:layout_below="@+id/balance_title"
+        android:text="--" />
+    
+    <TextView
+        android:id="@+id/send_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/balance_value"
+        android:layout_marginTop="10dp"
+        android:text="Send ReddCoins:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/netRDDlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/netRDD"
+        android:layout_below="@+id/send_title"
+        android:layout_marginTop="5dp"
+        android:text="Net amount:" />
+    
+    <EditText
+        android:id="@+id/netRDD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/balance_value"
+        android:layout_below="@+id/netRDDlabel"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+    
+    <TextView
+        android:id="@+id/feeRDDlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/netRDD"
+        android:layout_below="@+id/netRDD"
+        android:text="ReddAPI fee:" />
+
+    <EditText
+        android:id="@+id/feeRDD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/netRDD"
+        android:layout_below="@+id/feeRDDlabel"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+    
+    <TextView
+        android:id="@+id/grossRDDlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/netRDD"
+        android:layout_below="@+id/feeRDD"
+        android:text="Gross amount:" />
+
+    <EditText
+        android:id="@+id/grossRDD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/feeRDD"
+        android:layout_below="@+id/grossRDDlabel"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+    
+    <TextView
+        android:id="@+id/receiver_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/netRDD"
+        android:layout_below="@+id/grossRDD"
+        android:text="Receiving address:" />
+
+    <EditText
+        android:id="@+id/receiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/feeRDD"
+        android:layout_below="@+id/receiver_label"
+        android:ems="10"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/send_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/feeRDD"
+        android:layout_below="@+id/receiver"
+        android:layout_marginTop="5dp"
+        android:text="Send" />
+
+    <Button
+        android:id="@+id/qr"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/receiver"
+        android:layout_toRightOf="@+id/receiver"
+        android:text="QR" />
+
+</RelativeLayout>
+<ImageView
+        android:id="@+id/qr_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="70dp"/>
+
+</RelativeLayout>
+
+

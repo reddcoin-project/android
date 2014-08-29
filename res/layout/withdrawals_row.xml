@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="20dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_launcher">
+    </ImageView>
+    
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/icon"
+        android:lines="1"
+        android:text="amount"
+        android:textSize="16dp" />
+    
+    <TextView
+        android:id="@+id/address_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_below="@+id/amount"
+        android:layout_alignLeft="@+id/icon"
+        android:lines="1"
+        android:text="Address:"
+        android:textSize="12dp" 
+        android:textStyle="bold"
+        >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/amount"
+        android:layout_toRightOf="@+id/address_label"
+        android:lines="1"
+        android:text="address"
+        android:textSize="12dp" 
+        >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/txid_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_below="@+id/address_label"
+        android:layout_alignLeft="@+id/icon"
+        android:lines="1"
+        android:text="TX-ID:"
+        android:textSize="12dp" 
+        android:textStyle="bold"
+        >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/txid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/address"
+        android:layout_alignLeft="@+id/address"
+        android:layout_toRightOf="@+id/txid_label"
+        android:lines="1"
+        android:text="txid"
+        android:textSize="12dp" 
+        >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/timestamp_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_below="@+id/txid_label"
+        android:layout_alignLeft="@+id/icon"
+        android:lines="1"
+        android:text="Time:"
+        android:textSize="12dp" 
+        android:textStyle="bold"
+        >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/txid"
+        android:layout_alignLeft="@+id/address"
+        android:layout_toRightOf="@+id/txid_label"
+        android:lines="1"
+        android:text="timestamp"
+        android:textSize="12dp" 
+        >
+    </TextView>
+    
+    
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reddcoin.android"
+    android:versionCode="1"
+    android:versionName="alpha 1" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.reddcoin.android.activities.AuthActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.reddcoin.android.activities.MainActivity"
+            android:configChanges="orientation|screenSize" >
+        </activity>
+        <activity
+            android:name="com.reddcoin.android.activities.ContactsOverviewActivity" >
+        </activity>
+        <activity
+            android:name="com.reddcoin.android.activities.ContactDetailActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.reddcoin.android.activities.WithdrawalsOverviewActivity" >
+        </activity>
+        <activity
+            android:name="com.reddcoin.android.activities.WithdrawalDetailActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+		<activity
+            android:name="com.reddcoin.android.activities.DepositsOverviewActivity" >
+        </activity>
+        <provider
+            android:name="com.reddcoin.android.contentproviders.ContactContentProvider"
+            android:authorities="com.reddcoin.android.contact" >
+        </provider>
+        <provider
+            android:name="com.reddcoin.android.contentproviders.WithdrawalContentProvider"
+            android:authorities="com.reddcoin.android.withdrawal" >
+        </provider>
+    </application>
+</manifest>
